@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tidligere i Oslo</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Oslo-noteringer</h1>
+          <p>Arkiv (eldre enn 48 timer)</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="tab" href="./index.html">Nye (48t)</a>
+        <a class="tab active" href="./tidligere.html">Tidligere</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Tidligere selskaper i Oslo</h2>
+      <div class="meta" id="meta">Laster…</div>
+      <div class="meta" id="source"></div>
+
+      <div class="row">
+        <input class="input" id="q" placeholder="Søk (navn, ticker, ISIN, marked) …" />
+      </div>
+    </section>
+
+    <section class="grid" id="list"></section>
+
+    <div class="footer">
+      Tips: Søk på ticker eller ISIN for raske treff.
+    </div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+  <script>
+    App.renderOlder().catch(e => {
+      document.getElementById("meta").textContent = "Klarte ikke å laste data.";
+      document.getElementById("list").innerHTML = `<div class="card"><code>${String(e)}</code></div>`;
+    });
+  </script>
+</body>
+</html>
