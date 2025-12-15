@@ -1,7 +1,9 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
   "generated_at": "2025-12-15T13:47:16+00:00",
-  "items": [
+  "cutoff_hours": 48,
+  "recent": [],
+  "older": [
     {
       "date": "24/11/2025",
       "company": "BYGGMA",
