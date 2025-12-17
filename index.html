@@ -34,13 +34,23 @@
       Bygget med GitHub Pages + GitHub Actions · Data lagres i repoet (arkiv blir ikke borte)
     </div>
   </div>
+<script src="./assets/app.js" defer></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const meta = document.getElementById("meta");
+    const list = document.getElementById("list");
 
-  <script src="./assets/app.js"></script>
-  <script>
+    if (!window.App) {
+      meta.textContent = "Feil: app.js ble ikke lastet. Sjekk at /assets/app.js finnes og at path er riktig.";
+      list.innerHTML = `<div class="card"><code>Mangler window.App</code></div>`;
+      return;
+    }
+
     App.renderRecent().catch(e => {
-      document.getElementById("meta").textContent = "Klarte ikke å laste data.";
-      document.getElementById("list").innerHTML = `<div class="card"><code>${String(e)}</code></div>`;
+      meta.textContent = "Klarte ikke å laste data.";
+      list.innerHTML = `<div class="card"><code>${String(e)}</code></div>`;
     });
-  </script>
-</body>
-</html>
+  });
+</script>
+
+ 
