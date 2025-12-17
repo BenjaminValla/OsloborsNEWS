@@ -168,3 +168,10 @@ code{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size: 12px;
 }
+.btn.secondary{
+  border-color: rgba(167,139,250,.35);
+  background: rgba(167,139,250,.10);
+}
+.btn.secondary:hover{
+  background: rgba(167,139,250,.14);
+}
