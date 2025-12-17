@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "2025-12-17-1",
+      "date": "2025-12-17T09:10:00Z",
+      "title": "Eksempel: Selskap X meldte resultat",
+      "source": "OsloBørs",
+      "url": "https://example.com",
+      "tickers": ["XXX"]
+    },
+    {
+      "id": "2025-12-16-1",
+      "date": "2025-12-16T12:30:00Z",
+      "title": "Eksempel: Nyhet om Y",
+      "source": "DN",
+      "url": "https://example.com",
+      "tickers": ["YYY", "ZZZ"]
+    }
+  ]
+}
