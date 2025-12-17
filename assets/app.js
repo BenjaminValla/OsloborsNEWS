@@ -1,48 +1,103 @@
-async function loadData() {
-  const res = await fetch("./data/listings.json", { cache: "no-store" });
-  if (!res.ok) throw new Error("Fant ikke data/listings.json (har Action kjørt?)");
-  return res.json();
+const DATA_URL = new URL("../data/news.json", import.meta.url);
+
+function el(id) {
+  const node = document.getElementById(id);
+  if (!node) throw new Error(`Mangler element #${id}`);
+  return node;
 }
 
-function el(id){ return document.getElementById(id); }
+function fmtDate(iso) {
+  const d = new Date(iso);
+  // Norsk format, men uten å låse timezone for hardt:
+  return d.toLocaleString("no-NO", { year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit" });
+}
 
-function buildNordnetUrl(item) {
-  const ticker = (item.ticker || "").trim();
-  if (!ticker) return null;
+function normalize(s) {
+  return (s || "").toString().toLowerCase();
+}
 
-  // Prøv å hente exchange fra Euronext-lenken (typisk ...-XOSL)
-  let mic = "xosl";
-  if (item.url) {
-    const m = item.url.match(/-([A-Z0-9]{4})$/);
-    if (m) mic = m[1].toLowerCase();
+async function loadData() {
+  const res = await fetch(DATA_URL, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status} ved lasting av data`);
+  const json = await res.json();
+  if (!json?.items || !Array.isArray(json.items)) throw new Error("Ugyldig dataformat: forventer { items: [] }");
+  // Nyeste først
+  return json.items.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
+}
+
+function renderItems(items) {
+  const list = el("list");
+  list.innerHTML = "";
+
+  if (!items.length) {
+    list.innerHTML = `<div class="card"><div class="top">Ingen treff</div><h3>Fant ingen saker</h3></div>`;
+    return;
   }
 
-  // Mange Oslo-aksjer fungerer med format: /aksjer/kurser/{ticker}-{mic}
-  return `https://www.nordnet.no/aksjer/kurser/${encodeURIComponent(ticker.toLowerCase())}-${encodeURIComponent(mic)}`;
+  for (const item of items) {
+    const tickers = Array.isArray(item.tickers) ? item.tickers : [];
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="top">
+        <span>${fmtDate(item.date)}</span>
+        <span>${item.source ?? ""}</span>
+      </div>
+      <h3><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title ?? "Uten tittel"}</a></h3>
+      <div class="tags">
+        ${tickers.map(t => `<span class="tag">${t}</span>`).join("")}
+      </div>
+    `;
+    list.appendChild(card);
+  }
 }
 
-function cardHTML(item){
-  const safe = (x) => (x ?? "").toString();
-  const nordnetUrl = buildNordnetUrl(item);
+export async function renderLatest() {
+  const status = el("status");
+  try {
+    status.textContent = "Laster…";
+    const items = await loadData();
+    renderItems(items.slice(0, 20));
+    status.textContent = "";
+  } catch (e) {
+    console.error(e);
+    status.textContent = "Feil: " + (e?.message ?? e);
+  }
+}
 
-  return `
-    <article class="card">
-      <div class="title">
-        <h3 class="company">${safe(item.company)}</h3>
-        <span class="pill">${safe(item.date)}</span>
-      </div>
+export async function renderArchive() {
+  const status = el("status");
+  const q = el("q");
+  const days = el("days");
 
-      <div class="pills">
-        <span class="pill">${safe(item.market)}</span>
-        <span class="pill">${safe(item.location)}</span>
-        <span class="pill">Ticker: ${safe(item.ticker || "-")}</span>
-        <span class="pill">ISIN: ${safe(item.isin || "-")}</span>
-      </div>
+  let all = [];
+  const apply = () => {
+    const query = normalize(q.value);
+    const dayCount = Number(days.value);
+    const cutoff = Date.now() - dayCount * 24 * 60 * 60 * 1000;
 
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-        ${item.url ? `<a class="btn" href="${item.url}" target="_blank" rel="noreferrer">Les om selskapet →</a>` : ""}
-        ${nordnetUrl ? `<a class="btn secondary" href="${nordnetUrl}" target="_blank" rel="noreferrer">Kurs & graf (Nordnet) →</a>` : ""}
-      </div>
-    </article>
-  `;
+    const filtered = all.filter(it => {
+      const t = normalize(it.title);
+      const s = normalize(it.source);
+      const tick = (it.tickers || []).map(normalize).join(" ");
+      const matches = !query || `${t} ${s} ${tick}`.includes(query);
+      const within = dayCount >= 9999 || new Date(it.date).getTime() >= cutoff;
+      return matches && within;
+    });
+
+    renderItems(filtered);
+    status.textContent = filtered.length ? "" : "Ingen treff.";
+  };
+
+  try {
+    status.textContent = "Laster…";
+    all = await loadData();
+    status.textContent = "";
+    apply();
+    q.addEventListener("input", apply);
+    days.addEventListener("change", apply);
+  } catch (e) {
+    console.error(e);
+    status.textContent = "Feil: " + (e?.message ?? e);
+  }
 }
