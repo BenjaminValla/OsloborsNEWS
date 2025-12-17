@@ -3,59 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tidligere i Oslo</title>
-  <link rel="stylesheet" href="./assets/style.css">
+  <title>OsloBørs NEWS – Tidligere</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="container">
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Oslo-noteringer</h1>
-          <p>Arkiv (eldre enn 48 timer)</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a class="tab" href="./index.html">Nye (48t)</a>
-        <a class="tab active" href="./tidligere.html">Tidligere</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h2>Tidligere selskaper i Oslo</h2>
-      <div class="meta" id="meta">Laster…</div>
-      <div class="meta" id="source"></div>
-
-      <div class="row">
-        <input class="input" id="q" placeholder="Søk (navn, ticker, ISIN, marked) …" />
-      </div>
-    </section>
-
-    <section class="grid" id="list"></section>
-
-    <div class="footer">
-      Tips: Søk på ticker eller ISIN for raske treff.
+  <header class="wrap header">
+    <div>
+      <h1>Tidligere</h1>
+      <p class="muted">Arkiv over saker</p>
     </div>
-  </div>
-<script src="./assets/app.js" defer></script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const meta = document.getElementById("meta");
-    const list = document.getElementById("list");
+    <nav class="nav">
+      <a href="index.html">Nå</a>
+      <a class="active" href="tidligere.html">Tidligere</a>
+    </nav>
+  </header>
 
-    if (!window.App) {
-      meta.textContent = "Feil: app.js ble ikke lastet. Sjekk at /assets/app.js finnes og at path er riktig.";
-      list.innerHTML = `<div class="card"><code>Mangler window.App</code></div>`;
-      return;
-    }
+  <main class="wrap">
+    <div class="controls">
+      <input id="q" class="input" type="search" placeholder="Søk (tittel, tickers, kilde)…" />
+      <select id="days" class="input">
+        <option value="7">Siste 7 dager</option>
+        <option value="30" selected>Siste 30 dager</option>
+        <option value="180">Siste 180 dager</option>
+        <option value="365">Siste 365 dager</option>
+        <option value="9999">Alle</option>
+      </select>
+    </div>
 
-    App.renderOlder().catch(e => {
-      meta.textContent = "Klarte ikke å laste data.";
-      list.innerHTML = `<div class="card"><code>${String(e)}</code></div>`;
-    });
-  });
-</script>
+    <div id="status" class="status">Laster…</div>
+    <section id="list" class="list"></section>
+  </main>
 
- 
+  <footer class="wrap footer">
+    <span class="muted">Tips: legg til nye saker i <code>data/news.json</code></span>
+  </footer>
+
+  <script type="module">
+    import { renderArchive } from "./assets/app.js";
+    renderArchive();
+  </script>
+</body>
+</html>
+
   
