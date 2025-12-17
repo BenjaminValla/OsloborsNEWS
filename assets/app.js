@@ -12,11 +12,15 @@ function buildNordnetUrl(item) {
   // Mange Oslo-aksjer fungerer med format: /aksjer/kurser/{ticker}-{mic}
   return `https://www.nordnet.no/aksjer/kurser/${encodeURIComponent(ticker.toLowerCase())}-${encodeURIComponent(mic)}`;
 }
+function nordnetUrl(item){
+  // Åpner Nordnet aksjeliste (Oslo) – brukeren kan søke på ticker/ISIN der.
+  // (Stabil URL som fungerer uten at vi må kjenne intern instrument-id)
+  const q = encodeURIComponent(item.ticker || item.isin || item.company || "");
+  return `https://www.nordnet.no/market/stocks?exchangeList=no%3Aose&selectedTab=prices&query=${q}`;
+}
 
 function cardHTML(item){
   const safe = (x) => (x ?? "").toString();
-  const nordnetUrl = buildNordnetUrl(item);
-
   return `
     <article class="card">
       <div class="title">
@@ -32,8 +36,8 @@ function cardHTML(item){
       </div>
 
       <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-        ${item.url ? `<a class="btn" href="${item.url}" target="_blank" rel="noreferrer">Les om selskapet →</a>` : ""}
-        ${nordnetUrl ? `<a class="btn secondary" href="${nordnetUrl}" target="_blank" rel="noreferrer">Kurs & graf (Nordnet) →</a>` : ""}
+        ${item.url ? `<a class="btn" href="${item.url}" target="_blank" rel="noreferrer">Les mer (Euronext) →</a>` : ""}
+        <a class="btn" href="${nordnetUrl(item)}" target="_blank" rel="noreferrer">Kurs & graf (Nordnet) →</a>
       </div>
     </article>
   `;
