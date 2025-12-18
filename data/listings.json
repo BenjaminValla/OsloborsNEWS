@@ -1,8 +1,17 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2025-12-18T11:38:45+00:00",
+  "generated_at": "2025-12-18T13:54:36+00:00",
   "cutoff_hours": 48,
   "recent": [
+    {
+      "date": "19/12/2025",
+      "company": "BORR DRILLING",
+      "ticker": "BORR",
+      "isin": "BMG1466R1732",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/borr-drilling"
+    },
     {
       "date": "18/12/2025",
       "company": "Sea1 Offshore",
