@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-02-17T11:54:08+00:00",
+  "generated_at": "2026-02-17T13:39:10+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "18/02/2026",
+      "company": "GULF KEYSTONE PET",
+      "ticker": "GKP",
+      "isin": "BMG4209G2077",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/gulf-keystone-pet"
+    }
+  ],
   "older": [
     {
       "date": "19/12/2025",
