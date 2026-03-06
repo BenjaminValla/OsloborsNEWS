@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-03-06T15:53:34+00:00",
+  "generated_at": "2026-03-06T16:58:55+00:00",
   "items": [
+    {
+      "date": "09/03/2026",
+      "company": "PELAGIC CREDIT",
+      "ticker": "PLGC",
+      "isin": "CY0201332216",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/pelagic-credit"
+    },
     {
       "date": "18/02/2026",
       "company": "GULF KEYSTONE PET",
