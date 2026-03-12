@@ -1,8 +1,9 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-03-11T23:41:03+00:00",
+  "generated_at": "2026-03-12T03:11:20+00:00",
   "cutoff_hours": 48,
-  "recent": [
+  "recent": [],
+  "older": [
     {
       "date": "09/03/2026",
       "company": "PELAGIC CREDIT",
@@ -11,9 +12,7 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/pelagic-credit"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "18/02/2026",
       "company": "GULF KEYSTONE PET",
