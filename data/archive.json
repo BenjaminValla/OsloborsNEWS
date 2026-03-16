@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-03-16T10:15:44+00:00",
+  "generated_at": "2026-03-16T11:56:41+00:00",
   "items": [
+    {
+      "date": "17/03/2026",
+      "company": "CAPITAL TANKERS",
+      "ticker": "CAPT",
+      "isin": "MHY1096C1093",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/capital-tankers"
+    },
     {
       "date": "09/03/2026",
       "company": "PELAGIC CREDIT",
