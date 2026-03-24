@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-03-24T13:50:55+00:00",
+  "generated_at": "2026-03-24T15:18:55+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "25/03/2026",
+      "company": "JACKTEL",
+      "ticker": "JACK",
+      "isin": "NO0012477704",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/jacktel"
+    }
+  ],
   "older": [
     {
       "date": "17/03/2026",
