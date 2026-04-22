@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-04-22T11:21:12+00:00",
+  "generated_at": "2026-04-22T14:08:31+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "23/04/2026",
+      "company": "KONGSBERG MARITIME",
+      "ticker": "KMAR",
+      "isin": "NO0013697029",
+      "location": "Oslo",
+      "market": "Euronext Oslo Børs",
+      "url": "https://live.euronext.com/nb/ipo-showcase/kongsberg-maritime"
+    }
+  ],
   "older": [
     {
       "date": "26/03/2026",
