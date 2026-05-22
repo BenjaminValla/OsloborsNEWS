@@ -1,8 +1,17 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-05-22T12:00:13+00:00",
+  "generated_at": "2026-05-22T15:21:08+00:00",
   "cutoff_hours": 48,
   "recent": [
+    {
+      "date": "26/05/2026",
+      "company": "CONSTELLATION OIL SERVICES HOLDING S.A.",
+      "ticker": "COSH",
+      "isin": "NO0013597419",
+      "location": "Oslo",
+      "market": "Euronext Oslo Børs",
+      "url": "https://live.euronext.com/nb/ipo-showcase/constellation-oil-services-holding-sa"
+    },
     {
       "date": "21/05/2026",
       "company": "BORR DRILLING LIMITED",
