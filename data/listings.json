@@ -1,6 +1,6 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-05-23T23:10:36+00:00",
+  "generated_at": "2026-05-24T00:11:26+00:00",
   "cutoff_hours": 48,
   "recent": [
     {
@@ -11,7 +11,9 @@
       "location": "Oslo",
       "market": "Euronext Oslo Børs",
       "url": "https://live.euronext.com/nb/ipo-showcase/constellation-oil-services-holding-sa"
-    },
+    }
+  ],
+  "older": [
     {
       "date": "21/05/2026",
       "company": "BORR DRILLING LIMITED",
@@ -29,9 +31,7 @@
       "location": "Oslo",
       "market": "Euronext Oslo Børs",
       "url": "https://live.euronext.com/nb/ipo-showcase/ppi-public-property-invest-ab-publ"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "30/04/2026",
       "company": "Soiltech ASA",
