@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-04T12:17:47+00:00",
+  "generated_at": "2026-06-04T16:28:24+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "05/06/2026",
+      "company": "SHAMARAN PETROLEUM",
+      "ticker": "SNM",
+      "isin": "BMG8080M1001",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/shamaran-petroleum"
+    }
+  ],
   "older": [
     {
       "date": "26/05/2026",
