@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-05T12:18:55+00:00",
+  "generated_at": "2026-06-05T16:08:20+00:00",
   "items": [
+    {
+      "date": "08/06/2026",
+      "company": "MAGNORA DATA CENTE",
+      "ticker": "MDATA",
+      "isin": "NO0013750893",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/magnora-data-cente"
+    },
     {
       "date": "05/06/2026",
       "company": "SHAMARAN PETROLEUM",
