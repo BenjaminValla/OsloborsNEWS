@@ -1,6 +1,6 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-07T22:17:14+00:00",
+  "generated_at": "2026-06-08T01:33:52+00:00",
   "cutoff_hours": 48,
   "recent": [
     {
@@ -11,7 +11,9 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/magnora-data-cente"
-    },
+    }
+  ],
+  "older": [
     {
       "date": "05/06/2026",
       "company": "SHAMARAN PETROLEUM",
@@ -20,9 +22,7 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/shamaran-petroleum"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "26/05/2026",
       "company": "CONSTELLATION OIL SERVICES HOLDING S.A.",
