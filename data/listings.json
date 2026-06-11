@@ -1,8 +1,9 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-10T22:56:04+00:00",
+  "generated_at": "2026-06-11T01:38:08+00:00",
   "cutoff_hours": 48,
-  "recent": [
+  "recent": [],
+  "older": [
     {
       "date": "08/06/2026",
       "company": "MAGNORA DATA CENTE",
@@ -11,9 +12,7 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/magnora-data-cente"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "05/06/2026",
       "company": "SHAMARAN PETROLEUM",
