@@ -1,8 +1,9 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-20T22:34:22+00:00",
+  "generated_at": "2026-06-21T00:20:50+00:00",
   "cutoff_hours": 48,
-  "recent": [
+  "recent": [],
+  "older": [
     {
       "date": "18/06/2026",
       "company": "BOHUS",
@@ -11,9 +12,7 @@
       "location": "Oslo",
       "market": "Euronext Oslo Børs",
       "url": "https://live.euronext.com/nb/ipo-showcase/bohus"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "08/06/2026",
       "company": "MAGNORA DATA CENTE",
