@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-06-29T09:57:51+00:00",
+  "generated_at": "2026-06-29T14:18:14+00:00",
   "items": [
+    {
+      "date": "30/06/2026",
+      "company": "QUESTERRE EN PREF",
+      "ticker": "QGAS",
+      "isin": "CA74836K3082",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/questerre-en-pref"
+    },
     {
       "date": "18/06/2026",
       "company": "BOHUS",
