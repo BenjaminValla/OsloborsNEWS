@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-07-08T11:56:40+00:00",
+  "generated_at": "2026-07-08T14:39:42+00:00",
   "items": [
+    {
+      "date": "09/07/2026",
+      "company": "Polar Resources AS",
+      "ticker": "POLAR",
+      "isin": "NO0013756361",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/polar-resources"
+    },
     {
       "date": "02/07/2026",
       "company": "Pelican Aqua Holding",
