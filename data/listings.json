@@ -1,6 +1,6 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-07-11T23:09:48+00:00",
+  "generated_at": "2026-07-12T00:10:00+00:00",
   "cutoff_hours": 48,
   "recent": [
     {
@@ -11,7 +11,9 @@
       "location": "Oslo",
       "market": "Euronext",
       "url": "https://live.euronext.com/nb/ipo-showcase/gens-aurea"
-    },
+    }
+  ],
+  "older": [
     {
       "date": "09/07/2026",
       "company": "Polar Resources AS",
@@ -20,9 +22,7 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/polar-resources"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "02/07/2026",
       "company": "Pelican Aqua Holding",
