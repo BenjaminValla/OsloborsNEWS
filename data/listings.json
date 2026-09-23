@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-09-23T11:34:23+00:00",
+  "generated_at": "2026-09-23T16:56:53+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "24/09/2026",
+      "company": "Outlet Group Holding ASA",
+      "ticker": "OUTLT",
+      "isin": "NO0013757500",
+      "location": "Oslo",
+      "market": "Euronext Oslo Børs",
+      "url": "https://live.euronext.com/nb/ipo-showcase/outlet-group-holding-asa"
+    }
+  ],
   "older": [
     {
       "date": "28/08/2026",
