@@ -1,8 +1,9 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-09-26T22:48:49+00:00",
+  "generated_at": "2026-09-27T01:26:04+00:00",
   "cutoff_hours": 48,
-  "recent": [
+  "recent": [],
+  "older": [
     {
       "date": "24/09/2026",
       "company": "Outlet Group Holding ASA",
@@ -11,9 +12,7 @@
       "location": "Oslo",
       "market": "Euronext Oslo Børs",
       "url": "https://live.euronext.com/nb/ipo-showcase/outlet-group-holding-asa"
-    }
-  ],
-  "older": [
+    },
     {
       "date": "28/08/2026",
       "company": "OMC Tankers Ltd.",
