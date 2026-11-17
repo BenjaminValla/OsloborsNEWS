@@ -1,7 +1,16 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-11-17T13:23:20+00:00",
+  "generated_at": "2026-11-17T22:21:47+00:00",
   "items": [
+    {
+      "date": "18/11/2026",
+      "company": "Cetus Maritime Holdings Limited",
+      "ticker": "CTUS",
+      "isin": "KYG203121077",
+      "location": "Oslo",
+      "market": "Euronext Growth",
+      "url": "https://live.euronext.com/nb/ipo-showcase/cetus-maritime-holdings-limited"
+    },
     {
       "date": "05/11/2026",
       "company": "Cadeler plc",
