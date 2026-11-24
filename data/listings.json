@@ -1,8 +1,18 @@
 {
   "source": "https://live.euronext.com/nb/ipo-showcase",
-  "generated_at": "2026-11-24T06:00:05+00:00",
+  "generated_at": "2026-11-24T17:41:57+00:00",
   "cutoff_hours": 48,
-  "recent": [],
+  "recent": [
+    {
+      "date": "25/11/2026",
+      "company": "Capital Tankers Corp.",
+      "ticker": "CAPT",
+      "isin": "MHY1096C1093",
+      "location": "Oslo",
+      "market": "Euronext Oslo Børs",
+      "url": "https://live.euronext.com/nb/ipo-showcase/capital-tankers-corp"
+    }
+  ],
   "older": [
     {
       "date": "18/11/2026",
@@ -201,15 +211,6 @@
       "location": "Oslo",
       "market": "Euronext Growth",
       "url": "https://live.euronext.com/nb/ipo-showcase/jacktel"
-    },
-    {
-      "date": "17/03/2026",
-      "company": "CAPITAL TANKERS",
-      "ticker": "CAPT",
-      "isin": "MHY1096C1093",
-      "location": "Oslo",
-      "market": "Euronext Growth",
-      "url": "https://live.euronext.com/nb/ipo-showcase/capital-tankers"
     },
     {
       "date": "09/03/2026",
